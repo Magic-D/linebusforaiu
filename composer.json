@@ -1,0 +1,9 @@
+{
+    "name": "line/line-bot",
+    "description": "package to create line bot",
+    "type": "composer",
+    "minimum-stability": "stable",
+    "require": {
+        "linecorp/line-bot-sdk": "^4.3"
+    }
+}
