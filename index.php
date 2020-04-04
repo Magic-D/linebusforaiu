@@ -2,6 +2,12 @@
     // Composerでインストールしたライブラリを一括読み込み
     require_once __DIR__ . '/vendor/autoload.php';
 
+    $channelSecret = '...'; // Channel secret string
+$httpRequestBody = '...'; // Request body string
+$hash = hash_hmac('sha256', $httpRequestBody, $channelSecret, true);
+$signature = base64_encode($hash);
+// Compare X-Line-Signature request header string and the signature
+
     // アクセストークンを使いCurlHTTPClientをインスタンス化
     $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('Channel Access Token');
 
