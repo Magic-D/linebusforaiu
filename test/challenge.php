@@ -23,4 +23,5 @@ if($_SERVER['HTTP_ORIGIN'] == "http://arunranga.com") {
      "</body>",
    "</html>";
 }
+return response.getResponseCode();
 ?>
