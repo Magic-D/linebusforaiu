@@ -2,7 +2,8 @@
     // Composerでインストールしたライブラリを一括読み込み
     require_once __DIR__ . '/vendor/autoload.php';
 
-    $channelSecret = '...'; // Channel secret string
+    //　署名の追加　自分で編集
+    $channelSecret = '1f96a403c3e33a4d44444b992eedaa60'; // Channel secret string
 $httpRequestBody = '...'; // Request body string
 $hash = hash_hmac('sha256', $httpRequestBody, $channelSecret, true);
 $signature = base64_encode($hash);
